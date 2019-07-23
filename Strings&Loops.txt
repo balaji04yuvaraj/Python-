@@ -1,0 +1,199 @@
+Question1:
+*****************************************************************
+Method 1:
+======================================================================
+str1 = str(input("Please Enter your name for Palindrome check: "))
+str2 = str1[::-1]
+Result = str1 == str2
+print(f"The result is {Result}")
+======================================================================
+
+Method 2: #Using Loops
+===================================================================
+str1 = str(input("Please Enter your name for Palindrome check: "))
+#str1 = str1.lower()  		     # To Standardize the input
+str2 = str1[::-1] 
+countN=0                             #Count Initialized
+for i in range(0,len(str1)):           
+    pos = i                          #Index Position
+    if str1[i] == str2[i]:
+        countN +=1                   #Count Matching Position
+        print(f"The Index position {pos} Matches")
+    else:
+        print(f"The Index position {pos}  DoesntMatches")
+        
+if len(str1) == countN:
+    print(f"The Entered Value {str1} is equal to {str2} and its a  Palendrome")
+else:
+    print("Not a Palendrome")  
+========================================================================
+Question2:
+*****************************************************************
+str1 = input("Enter the String Value")
+Ln = int(len(str1)/2)
+str = str1[Ln::-1] + str1[Ln::]
+print(str)
+========================================================================
+Question3:
+*****************************************************************
+valst1 = str(input("Please enter the value :"))
+l=len(valst1)
+if valst1.upper() == valst1:
+    print("The String is in UpperCase")
+elif valst1.upper()[l-1] == valst1[l-1]:
+    print("The String Endswith Capital Letter")
+elif valst1.upper()[0] == valst1[0]:
+    print("The String is Capitalized")
+else:
+    print("Unknown String")
+=========================================================================
+Question4:(Number Mutiple By 7 and Not Multiple by 5)
+*****************************************************************
+strng = int(input("Please enter the starting value:"))
+enrng = int(input("Please enter the starting value:"))
+
+val_range = []
+Val_notin_range = []
+for value in range(strng,enrng):
+    if ((value %7 == 0) and (value % 5 != 0)):
+        val_range.append(value)       
+    else:
+        Val_notin_range.append(value)
+        
+print("The Value in Range is :",val_range)
+print("The Value not in Range is :",Val_notin_range)        
+========================================================================   
+Question 5:(Factorial)
+*****************************************
+value = int(input("Please enter the value for factorial calculation:"))
+count = value
+for i in range(1,value):
+    count *= (value-i)
+    print(count)
+print(count)
+=========================================================================
+Question 6:(Dictonary with integrals)
+**********************************
+dict = {}
+value = int(input("Please enter the value for integral calculation:"))
+for i in range(1,value):
+    dict[i] = i*i
+print(dict)
+========================================================================
+
+Question7:(Comma entries converted to List and Tuples)
+******************************************************
+strvalue = str(input("Please enter the value :"))
+strlst = strvalue.split(',')
+lst = []
+for i in strlst:
+    lst.append(int(i))
+tupset = tuple(lst)
+print(lst)
+print(tupset)
+========================================================================
+
+
+#lst = str(input("Please enter a values for list"))
+lst = []
+lst.append("I am new sample test entry")
+if lst[0] == "I am new entry" :
+    print("This is an empty list")
+else:
+    print("This is an Non empty list")
+
+
+=====================================================================
+year_value = int(input("Please enter the year value: "))
+
+"Leap Year" if ((year_value%400 == 0) or (year_value%100 != 0 and year_value%4 == 0)) else "Not a Leap Year"
+=================================================================
+
+Joinedby = int(input("Please enter the year value: "))
+CurrentYear = int(input("Please enter the year value: "))
+salary = int(input("please enter the salary: "))
+nsalary = salary + 2500
+print("Salary is :",nsalary) if (abs(Joinedby - CurrentYear)) > 3  else "No Change in Salary"
+===================================================================
+
+Name = input("Enter Student Name:") 
+count =0 
+while Name.isnumeric(): 
+    Name = input("Enter Right Student Name:")  
+    count +=1 
+    if count == 5: 
+        print("Max try completed Bye")
+        break 
+Maths = int(input("Enter Student mark in Maths:")) 
+while ((Maths > 100) | (Maths < 0)): 
+    Maths = int(input("Enter  Valid Student mark in Maths:"))
+    count +=1 
+    if count == 5: 
+        print("Max try completed Bye") 
+        break 
+Science = int(input("Enter Student mark in Science:")) 
+while ((Science > 100) | (Science < 0)): 
+    Science = int(input("Enter  Valid Student mark in Science:"))
+    count +=1 
+    if count == 5: 
+        print("Max try completed Bye") 
+        break 
+History = int(input("Enter Student mark in History:")) 
+while ((History > 100) | (History < 0)): 
+    History = int(input("Enter  Valid Student mark in History:"))
+    count +=1 
+    if count == 5: 
+        print("Max try completed Bye") 
+        break 
+Geography = int(input("Enter Student mark in Geography:"))
+while ((Geography > 100) | (Geography < 0)): 
+    Geography = int(input("Enter  Valid Student mark in Geography:"))
+    count +=1 
+    if count == 5: 
+        print("Max try completed Bye") 
+        break 
+Language = int(input("Enter Student mark in Language:"))
+while ((Language > 100) | (Language < 0)): 
+    Language = int(input("Enter  Valid Student mark in Language:"))
+    count +=1 
+    if count == 5: 
+        print("Max try completed Bye") 
+        break 
+Average = (Maths+Science+History+Geography+Language)/5
+while ((Maths < 40) | (Science < 40)  | (History < 40) | (Geography < 40) |(Language < 40)):
+    print(f"The Student Failed in One of the subject")
+    break
+ 
+if Average >= 60: 
+    print(f"{Name} has secure {Average} % and he is in first division") 
+elif (Average >= 50) and (Average <= 59) : 
+    print(f"{Name} has secure {Average} % and he is in second division") 
+elif(Average >= 40) and (Average <= 49): 
+    print(f"{Name} has secure {Average} % and he is in Third division") 
+else: 
+    print(f"{Name} has secure {Average} % and he is in fourth division")
+==============================================================================================
+Name = input("Enter the Name of the Driver:")
+Mart_status = input("Enter the Mart_status | Married | unmarried")
+Age = int(input("Enter the Age:"))
+count = 0
+while ((Age >= 65) | (Age < 18)):
+    count += 1   
+    print(f"Hello {Name}, you are not  eligible for driving")
+    Name = input("{Name} enter right age:")
+    if count == 5:    
+        print(f"{Name} You have tried max attempt:")    
+        break    
+Gender = input("Enter the Gender of the Driver : | Male | Female")
+
+if ((Mart_status == "Married") | (Mart_status == "married")):
+    print(f"Insurance Could be provided to {Name}")
+elif ((Mart_status == "unmarried") and (Gender == "Male") and (Age >= 30)):
+    print(f"Insurance Could be provided to {Name}")
+elif ((Mart_status == "unmarried") and (Gender == "Female") and (Age >= 25)):
+    print(f"Insurance Could be provided to {Name}")
+else:
+    print("Your Not Eligible for Insurance")
+
+-===============================================================================================
+
