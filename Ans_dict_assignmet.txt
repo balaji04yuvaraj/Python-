@@ -1,0 +1,95 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1)Python Progm to add a key -Value pair to the dictionary
+#-----------------------ANSWER---------------------------------------------
+dict1 = dict(a=2,b=3,c=4,d=5)
+dict1["e"] = 4
+i = input("Enter Key: ")
+x = input("Enter Value :")
+dict1[1] = x
+print(dict1)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2)Python Progm to concatenate two dictionaries into one
+#-----------------------ANSWER---------------------------------------------
+dict1 = {'a':1,'b':2,'c':3}
+dict2 = {'a':1,'b':3,'d':4}
+dict1.update(dict2)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+3)Python Progm to check if a given key exist in a dictionary or Not
+#-----------------------ANSWER---------------------------------------------
+dict1 = {'a':1,'b':2,'c':3}
+
+req_key = input("Enter the dict key: ")
+for i in dict1:
+    if req_key == i:
+        print(f"The Requested Key --{i}-- exit:")
+        print(dict1[i],"is the value of", i)
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+4)Python program to generate a dictionary that contains numbers(between 1 and n)
+in the form (x,x*x)
+#-----------------------ANSWER--------------------------------------------------
+val = int(input("Enter the dict key: "))
+dict ={}
+for i in range(1,val):
+    dict[i] = i*i
+print(dict)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+5)Python program to sum all the items in a dictionary
+#-----------------------ANSWER---------------------------------------------
+for i in dict.values():
+    sum += i
+print("The summed Up value is : ",sum)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+6)Python program to  multiply all the items in a dictionary
+#-----------------------ANSWER---------------------------------------------
+mul=1
+for i in dict.values():
+    mul *= i
+print("The multiplied value is : ",mul)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+7)Python program to remove the given key from a dictionary
+#-----------------------ANSWER---------------------------------------------
+i = input("Enter the key that needs to be deleted: ")
+
+del disct[i]
+print(disct.get(i,f"{i} is deleted"))
+disct
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+8)Python program to forma Dictionary from an object
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+9)Python to map two lists into a dictonary
+#-----------------------ANSWER---------------------------------------------
+lst1 = ['a','b','c','d','e','f','g']
+lst2 = [2,3,4,5,2,3,4,5,9]
+dclst ={}
+for i in range(len(lst1)):
+    dclst[lst1[i]] = lst2[i]
+print(dclst)
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+10)Python program to count Frequency of words appearing in a string using a dictionary
+#-----------------------ANSWER----------------------------------------------------------
+strg = input("Enter the string Value: ")
+strg_new = strg.split(" ")
+disct = {}
+for i in strg_new:
+    count = 1
+    key = disct.keys()
+    if i not in key:
+        disct[i] = 1
+    else:
+        count += 1
+        disct[i] = count
+
+print(strg_new)
+print(disct)
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+11)Python programm to create a dictionary with key as first character and values
+as words starting with that characte*er
+#-----------------------ANSWER------------------------------------------------------
+strg = input("Enter the String: ")
+strg_new = strg.split(" ")
+print(strg_new)
+disct = {}
+for i in strg_new:
+    disct[i[0]] = i
+print(disct)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
